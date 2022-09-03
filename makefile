@@ -1,4 +1,4 @@
-SRC_DIR = ./source
+SRC_DIR = ./src
 OBJ_DIR = ./build
 
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c) 
