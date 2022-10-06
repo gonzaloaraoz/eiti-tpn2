@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Gonzalo Aráoz <gonzaloaraoz73@gmail.com>
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,46 +32,50 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef MAIN_H   /*! @cond    */
-#define MAIN_H   /*! @endcond */
-
-/** @file main.h
+/** @file adlumno.c
  **
- ** @brief declaracines del programa
+ ** @brief Plantilla de archivos fuente
  **
-
+ ** Plantilla para los archivos de codigo fuente de prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
- ** |  1 | 2022.08.27 | gonzaloaraoz  | Version inicial del archivo             |
+ ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
  ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
 
-/* === Inclusiones de archivos externos ==================================== */
+/* === Inclusiones de cabeceras ============================================ */
+#include "alumno.h"
+#include <stdio.h>
 
-/* === Cabecera C++ ======================================================== */
-#ifdef __cplusplus
-extern "C" {
-#endif
 
-/* === Definicion y Macros publicos ======================================== */
+/* === Definicion y Macros privados ======================================== */
 
-/* == Declaraciones de tipos de datos publicos ============================= */
+/* === Declaraciones de tipos de datos privados ============================ */
 
-/* === Declaraciones de variables publicas ================================= */
+/* === Definiciones de variables privadas ================================== */
 
-/* === Declaraciones de funciones publicas ================================= */
+/* === Definiciones de variables publicas ================================== */
 
-int main(void);
+/* === Declaraciones de funciones privadas ================================= */
+
+/* === Definiciones de funciones privadas ================================== */
+
+/* === Definiciones de funciones publicas ================================== */
+
+void nombre(struct alumno_s * const alumno){
+    printf("Apellido del Alumno: %s\r\n", alumno->apellido);
+    printf("Nombre del Alumno: %s\r\n", alumno->nombre);
+    printf("DNI del Alumno: %s\r\n", alumno->documento);
+};
 
 /* === Ciere de documentacion ============================================== */
-#ifdef __cplusplus
-}
-#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
-#endif   /* MAIN_H */

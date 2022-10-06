@@ -1,38 +1,71 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.3
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
+ 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Thu Oct  6 11:03:06 2022
+ 
+# Make data base, printed on Thu Oct  6 11:24:12 2022
+ 
 
 # Variables
+ 
 
+ 
 # environment
+ 
 GDK_BACKEND = x11
+ 
 # environment
+ 
 LC_ALL = C
+ 
 # makefile (from 'makefile', line 1)
+ 
 SRC_DIR = ./src
+ 
 # environment
+ 
 VSCODE_CWD = /home/estudiante
+ 
 # default
+ 
 MAKE_COMMAND := make
+ 
 # environment
+ 
 QT_ACCESSIBILITY = 1
+ 
 # automatic
+ 
 @D = $(patsubst %/,%,$(dir $@))
+ 
 # makefile (from 'makefile', line 3)
+ 
 OBJ_DIR = $(OUT_DIR)/obj
+ 
 # environment
+ 
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+ 
 # default
+ 
 .VARIABLES := 
+ 
 # environment
+ 
 PWD = /home/estudiante/EITI/eiti-tpn2
+ 
 # automatic
+ 
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /home/estudiante/.local/share:/usr/local/share:/usr/share
@@ -147,11 +180,12 @@ GNUMAKEFLAGS :=
 # environment
 BROWSER = firefox
 # environment
+ 
 LOGNAME = estudiante
 # environment
 XDG_VTNR = 7
-# makefile
-.DEFAULT_GOAL := clean
+# makefile (from 'makefile', line 9)
+.DEFAULT_GOAL := all
 # environment
 DISPLAY = :0
 # environment
@@ -203,7 +237,7 @@ XDG_CACHE_HOME = /home/estudiante/.cache
 # environment
 XDG_MENU_PREFIX = lxqt-
 # variable set hash-table stats:
-# Load=96/1024=9%, Rehash=0, Collisions=3/141=2%
+# Load=96/1024=9%, Rehash=0, Collisions=3/149=2%
 
 # Pattern-specific Variable Values
 
@@ -212,10 +246,10 @@ XDG_MENU_PREFIX = lxqt-
 # Directories
 
 # src (device 2049, inode 1440034): 8 files, no impossibilities.
-# . (device 2049, inode 929068): 8 files, no impossibilities.
+# . (device 2049, inode 929068): 9 files, no impossibilities.
 # ./src (device 2049, inode 1440034): 8 files, no impossibilities.
 
-# 24 files, no impossibilities in 3 directories.
+# 25 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -228,7 +262,7 @@ build/obj/%.o: src/%.c
 # 1 implicit rules, 0 (0.0%) terminal.
 # Files
 
-clean: (OUT_DIR)
+clean: build
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -236,17 +270,34 @@ clean: (OUT_DIR)
 	@echo Borrando carpeta build
 	
 
-# Not a target:
-build/obj/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+build/obj/main.o: src/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-10-06 11:14:16.336068434
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 20):
+	@echo Compilando $< ...
+	@mkdir -p $(OBJ_DIR)
+	@gcc -o $@ -c $< 
+
+build/obj/foo.o: src/foo.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'foo'
+#  Last modified 2022-10-06 11:14:16.284068433
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 20):
+	@echo Compilando $< ...
+	@mkdir -p $(OBJ_DIR)
+	@gcc -o $@ -c $< 
 
 # Not a target:
-build/obj/foo.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2020-04-17 20:24:03
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -257,58 +308,69 @@ build/obj/foo.o:
 all: build/obj/bar.o build/obj/foo.o build/obj/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# * := 
+# automatic
+# < := build/obj/bar.o
+# automatic
+# + := build/obj/bar.o build/obj/foo.o build/obj/main.o
+# automatic
+# % := 
+# automatic
+# ^ := build/obj/bar.o build/obj/foo.o build/obj/main.o
+# automatic
+# ? := build/obj/bar.o build/obj/foo.o build/obj/main.o
+# automatic
+# | := 
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=8/32=25%, Rehash=0, Collisions=11/21=52%
 #  recipe to execute (from 'makefile', line 15):
 	@echo Enlazando el binario final
 	@mkdir -p $(BIN_DIR)
 	@gcc $(OBJ_FILES) -o $(BIN_DIR)/app.out
 
-# Not a target:
-(OUT_DIR):
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 build/obj/bar.o: src/bar.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'bar'
-#  File does not exist.
+#  Last modified 2022-10-06 11:14:16.216068432
 #  File has been updated.
-#  Needs to be updated (-q is set).
- 
-# automatic
-# @ := build/obj/bar.o
-# automatic
-# * := bar
-# automatic
-# < := src/bar.c
-# automatic
-# + := src/bar.c
-# automatic
-# % := 
-# automatic
-# ^ := src/bar.c
-# automatic
-# ? := src/bar.c
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
 	@echo Compilando $< ...
 	@mkdir -p $(OBJ_DIR)
 	@gcc -o $@ -c $< 
 
 # Not a target:
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-09-02 19:37:05.458485398
+#  Last modified 2022-10-06 11:13:28.344067644
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+src/foo.c:
+#  Implicit rule search has been done.
+#  Last modified 2020-04-17 20:24:03
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/bar.c:
@@ -318,19 +380,19 @@ src/bar.c:
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=10/1024=1%, Rehash=0, Collisions=0/28=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 252 B / avg = 8 B
-# current buf: size = 8162 B / used = 252 B / count = 29 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 278 B / avg = 8 B
+# current buf: size = 8162 B / used = 278 B / count = 33 / avg = 8 B
 
-# strcache performance: lookups = 40 / hit rate = 27%
+# strcache performance: lookups = 48 / hit rate = 31%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=0/40=0%
-# Finished Make data base on Thu Oct  6 11:03:06 2022
+# Load=33/8192=0%, Rehash=0, Collisions=0/48=0%
+# Finished Make data base on Thu Oct  6 11:24:12 2022
 
  

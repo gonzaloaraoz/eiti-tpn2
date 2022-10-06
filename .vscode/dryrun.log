@@ -1,6 +1,11 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/estudiante/EITI/eiti-tpn2'
+ 
+echo Enlazando el binario final
+ 
+mkdir -p ./build/bin
+ 
+gcc  ./build/obj/bar.o  ./build/obj/foo.o  ./build/obj/main.o -o ./build/bin/app.out
+ 
 make: Leaving directory '/home/estudiante/EITI/eiti-tpn2'
  
-make: *** No rule to make target '(OUT_DIR)', needed by 'clean'.
-

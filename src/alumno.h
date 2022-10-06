@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Gonzalo Aráoz <gonzaloaraoz73@gmail.com>
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,18 +32,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef MAIN_H   /*! @cond    */
-#define MAIN_H   /*! @endcond */
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
 
-/** @file main.h
+/** @file alumno.h
  **
- ** @brief declaracines del programa
+ ** @brief ALUMNO de archivos de cabecera 
  **
-
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
- ** |  1 | 2022.08.27 | gonzaloaraoz  | Version inicial del archivo             |
+ ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
  ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
@@ -61,11 +60,20 @@ extern "C" {
 
 /* == Declaraciones de tipos de datos publicos ============================= */
 
+struct alumno_s {
+    char apellido[64];
+    char nombre[64];
+    char documento[16];
+};
+
+
+
 /* === Declaraciones de variables publicas ================================= */
 
 /* === Declaraciones de funciones publicas ================================= */
 
-int main(void);
+void nombre(struct alumno_s * const alumno);
+
 
 /* === Ciere de documentacion ============================================== */
 #ifdef __cplusplus
@@ -74,4 +82,4 @@ int main(void);
 
 /** @} Final de la definición del modulo para doxygen */
 
-#endif   /* MAIN_H */
+#endif   /* ALUMNO_H */

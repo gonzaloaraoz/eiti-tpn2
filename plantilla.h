@@ -35,11 +35,14 @@
 #ifndef MAIN_H   /*! @cond    */
 #define MAIN_H   /*! @endcond */
 
-/** @file main.h
+/** @file plantilla.h
  **
- ** @brief declaracines del programa
+ ** @brief Plantilla de archivos de cabecera 
  **
-
+ ** Plantilla para los archivos de cabeceras de las prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|

@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Gonzalo Aráoz <gonzaloaraoz73@gmail.com>
+ * Copyright 2022, Gonzalo Aráoz <gonzaloaraoz73@gmai.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,46 +32,52 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef MAIN_H   /*! @cond    */
-#define MAIN_H   /*! @endcond */
-
-/** @file main.h
+/** @file main.c
  **
- ** @brief declaracines del programa
+ ** @brief Programa principal
  **
-
+ ** Plantilla para los archivos de codigo fuente de prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
- ** |  1 | 2022.08.27 | gonzaloaraoz  | Version inicial del archivo             |
+ ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
  ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
 
-/* === Inclusiones de archivos externos ==================================== */
+/* === Inclusiones de cabeceras ============================================ */
+#include "main.h"
 
-/* === Cabecera C++ ======================================================== */
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include <stdio.h>
 
-/* === Definicion y Macros publicos ======================================== */
+/* === Definicion y Macros privados ======================================== */
 
-/* == Declaraciones de tipos de datos publicos ============================= */
+/* === Declaraciones de tipos de datos privados ============================ */
 
-/* === Declaraciones de variables publicas ================================= */
+/* === Definiciones de variables privadas ================================== */
 
-/* === Declaraciones de funciones publicas ================================= */
+/* === Definiciones de variables publicas ================================== */
 
-int main(void);
+/* === Declaraciones de funciones privadas ================================= */
+
+/* === Definiciones de funciones privadas ================================== */
+
+/* === Definiciones de funciones publicas ================================== */
+
+int main(void) {
+	printf("Empieza el programa principal\r\n");
+	printf("Termina el programa principal\r\n");
+	return 0;
+}
+
+
 
 /* === Ciere de documentacion ============================================== */
-#ifdef __cplusplus
-}
-#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
-#endif   /* MAIN_H */
