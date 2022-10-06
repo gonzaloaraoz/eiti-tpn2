@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/estudiante/EITI/eiti-tpn2'
+make: Leaving directory '/home/estudiante/EITI/eiti-tpn2'
+ 
+make: *** No rule to make target '(OUT_DIR)', needed by 'clean'.
+
